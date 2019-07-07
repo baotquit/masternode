@@ -23,12 +23,12 @@ export default class SignupComponent extends Component {
 
     renderInputView () {
         return (
-            <View style={{flex:1, justifyContent: 'flex-end', padding: scale(16)}}>
+            <View style={{flex:1, justifyContent: 'flex-end', padding: scale(5), width: '100%', height: '100%'}}>
                <ScrollView showsVerticalScrollIndicator = {false} bounces = {false}  style={{flex:1}}>
                 <View style={{paddingVertical: verticalScale(40), justifyContent: 'center', alignItems: 'center'}}>
                     <Image style={{height: 130, width: 130}} source={LOGO}/>
                     <Text style={{fontSize: 20, color: WHITE_COLOR, paddingTop: 5, fontWeight: 'bold'}}>HOLDERCLUBS</Text>
-                    <Text style={{fontSize: 8, color: WHITE_COLOR, paddingTop: 5, fontWeight: 'bold'}}>NEPALESE RESTAURANT AND BAR</Text>
+                    <Text style={{fontSize: 8, color: WHITE_COLOR, paddingTop: 5, fontWeight: 'bold'}}>SIGABIT</Text>
                     <Text style={{fontSize: 30, color: WHITE_COLOR, paddingTop: 40, fontWeight: 'bold'}}>WELCOME</Text>
                 
                 </View>
@@ -87,7 +87,8 @@ export default class SignupComponent extends Component {
 
                 <View style={{height: verticalScale(20)}}/>
 
-                <TouchableOpacity style={{paddingVertical: verticalScale(10), borderColor: SECONDARY_COLOR, borderWidth: 0.5, justifyContent: 'center', alignItems: 'center', backgroundColor: PRIMARY_COLOR}} onPress = {() => console.log('')}>
+                <TouchableOpacity style={{paddingVertical: verticalScale(10), borderRadius: 10,
+                    borderColor: SECONDARY_COLOR, borderWidth: 0.5, justifyContent: 'center', alignItems: 'center', backgroundColor: PRIMARY_COLOR}} onPress = {() => console.log('')}>
                     <Text style={{fontSize: scale(16), fontWeight: 'bold', color: WHITE_COLOR}}>SIGN UP</Text>
                 </TouchableOpacity>
                 
@@ -102,7 +103,7 @@ export default class SignupComponent extends Component {
     render () {
         return (
             <SafeAreaView style={{flex:1}}>
-                <View style={{position: 'absolute', height, width, right: 0, bottom: 0, left: 0, top: 0}}>
+                <View style={{position: 'absolute', height, width, right: 0, bottom: 0, left: 0, top: 0, width: '100%', height: '100%'}}>
                     <ImageBackground style={{flex:1}} resizeMode='stretch' source = {BACKGROUND_IMAGE}/>
                 </View>
                 {this.renderInputView()}

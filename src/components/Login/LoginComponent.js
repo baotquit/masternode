@@ -22,7 +22,7 @@ export default class LoginComponent extends Component {
 
     renderInputView () {
         return (
-            <View style={{flex:1, justifyContent: 'flex-end',  padding: scale(16)}}>
+            <View style={{flex:1, justifyContent: 'flex-end', width: '100%', height: '100%', padding: scale(5)}}>
                 <ScrollView showsVerticalScrollIndicator = {false} bounces = {false}  style={{flex:1}}>
                 
                 <View style={{paddingVertical: verticalScale(60), justifyContent: 'center', alignItems: 'center'}}>
@@ -59,7 +59,9 @@ export default class LoginComponent extends Component {
 
                 <View style={{height: verticalScale(20)}}/> 
 
-                <TouchableOpacity onLongPress = {() => this.props.onLongPress()}  style={{paddingVertical: verticalScale(10), borderColor: SECONDARY_COLOR, borderWidth: 0.5, justifyContent: 'center', alignItems: 'center', backgroundColor: PRIMARY_COLOR}} onPress = {() => this.props.login()}>
+                <TouchableOpacity onLongPress = {() => this.props.onLongPress()}  
+                style={{paddingVertical: verticalScale(10), borderColor: SECONDARY_COLOR, borderWidth: 0.5, borderRadius: 10,
+                justifyContent: 'center', alignItems: 'center', backgroundColor: PRIMARY_COLOR}} onPress = {() => this.props.login()}>
                     <Text style={{fontSize: scale(16), fontWeight: 'bold', color: WHITE_COLOR}}>LOGIN</Text>
                 </TouchableOpacity>
                 
@@ -74,7 +76,7 @@ export default class LoginComponent extends Component {
     render () {
         return (
             <SafeAreaView style={commonStyle.safeAreaViewContainer}>
-            <View style={{position: 'absolute', height, width, right: 0, bottom: 0, left: 0, top: 0}}>
+            <View style={{position: 'absolute', height, width, right: 0, bottom: 0, left: 0, top: 0, width: '100%', height: '100%'}}>
                     <Image style={{flex:1}} resizeMode='cover' source = {BACKGROUND_IMAGE}/>
                 </View>
                 {this.renderInputView()}
